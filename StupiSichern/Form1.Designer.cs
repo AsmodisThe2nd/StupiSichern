@@ -48,6 +48,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.artikelTableAdapter1 = new StupiSichern.StupidataDataSetTableAdapters.ArtikelTableAdapter();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -67,12 +69,12 @@
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(188, 13);
             this.numericUpDown1.Maximum = new decimal(new int[] {
-            50000,
+            100000,
             0,
             0,
             0});
             this.numericUpDown1.Minimum = new decimal(new int[] {
-            1,
+            2,
             0,
             0,
             0});
@@ -155,7 +157,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(120, 20);
             this.textBox3.TabIndex = 9;
-            this.textBox3.Text = "A";
+            this.textBox3.Text = "!";
             // 
             // groupBox2
             // 
@@ -224,11 +226,26 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Namespace:";
             // 
+            // artikelTableAdapter1
+            // 
+            this.artikelTableAdapter1.ClearBeforeFill = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(599, 12);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(191, 17);
+            this.checkBox1.TabIndex = 16;
+            this.checkBox1.Text = "Automatisch fortsetzen, wenn fertig";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 145);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.progressBar1);
@@ -274,6 +291,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ToolTip toolTip1;
+        private StupidataDataSetTableAdapters.ArtikelTableAdapter artikelTableAdapter1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 
